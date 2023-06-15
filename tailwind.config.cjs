@@ -2,7 +2,14 @@
 const config = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        forrest: "url('/images/forrest.jpeg')",
+      },
+      fontFamily: {
+        pixel: ["VT323", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
