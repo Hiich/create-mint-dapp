@@ -6,6 +6,7 @@ import { parseEther } from "viem";
 import { useAccount, useContractWrite } from "wagmi";
 import nut from "~/../public/images/nut.png";
 import sadSquirrel from "~/../public/images/sadSquirrel.png";
+import twitter from "~/../public/images/twitter.png";
 import happySquirrel from "~/../public/images/happySquirrel.png";
 import { Button } from "~/components/Button";
 import { ConnectWallet } from "~/components/ConnetWallet";
@@ -30,7 +31,17 @@ const Home: NextPage = () => {
       </Head>
       <main className="font-vt flex min-h-screen flex-col items-center justify-center bg-forrest bg-cover bg-center bg-no-repeat">
         <div className="container flex h-full flex-col items-center justify-between gap-12  px-4 py-16 text-amber-800">
-          <div className="flex flex-col gap-y-4 rounded-xl bg-black bg-opacity-40 py-16">
+          <Image
+            src={twitter}
+            alt="Twitter"
+            width={50}
+            height={50}
+            className="fixed right-0 top-0 m-10 cursor-pointer"
+            onClick={() => {
+              window.open("https://twitter.com/DezNutsNFT", "_blank");
+            }}
+          />
+          <div className="flex flex-col gap-y-4 rounded-xl bg-black bg-opacity-40 p-16">
             {/* <div className="flex flex-row items-center justify-center gap-x-4">
               <Image src={nut} alt="Squirrels NFT" width={120} height={120} />
               <h1 className="text-6xl font-extrabold tracking-tight sm:text-[5rem]">
