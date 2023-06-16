@@ -4,7 +4,7 @@ const config = {
   theme: {
     extend: {
       backgroundImage: {
-        forrest: "url('/images/forrest.png')",
+        forrest: "url('/images/forrest.gif')",
       },
       fontFamily: {
         pixel: ["VT323", "sans-serif"],
