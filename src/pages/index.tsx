@@ -10,7 +10,7 @@ import happySquirrel from "~/../public/images/happySquirrel.png";
 import { Button } from "~/components/Button";
 import { ConnectWallet } from "~/components/ConnetWallet";
 import config from "~/config/config";
-
+import logo from "~/../public/images/logo.png";
 const Home: NextPage = () => {
   const { isConnected } = useAccount();
   const [amount, setAmount] = useState(1);
@@ -31,7 +31,7 @@ const Home: NextPage = () => {
       <main className="font-vt flex min-h-screen flex-col items-center justify-center bg-forrest bg-cover bg-center bg-no-repeat">
         <div className="container flex h-full flex-col items-center justify-between gap-12  px-4 py-16 text-amber-800">
           <div className="flex flex-col gap-y-4 rounded-xl bg-black bg-opacity-40 py-16">
-            <div className="flex flex-row items-center justify-center gap-x-4">
+            {/* <div className="flex flex-row items-center justify-center gap-x-4">
               <Image src={nut} alt="Squirrels NFT" width={120} height={120} />
               <h1 className="text-6xl font-extrabold tracking-tight sm:text-[5rem]">
                 Deez Nuts
@@ -43,7 +43,8 @@ const Home: NextPage = () => {
                 height={120}
                 className="scale-x-[-1]"
               />
-            </div>
+            </div> */}
+            <Image src={logo} alt="Squirrels NFT" width={300} height={300} />
             <p className="text-center text-2xl font-bold text-white">
               Each squirrel costs {config.price} ETH
             </p>

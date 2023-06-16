@@ -9,6 +9,7 @@ import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { mainnet, sepolia } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
+import { useEffect, useState } from "react";
 
 const { chains, publicClient } = configureChains(
   [mainnet, sepolia],
@@ -31,12 +32,22 @@ const wagmiConfig = createConfig({
 });
 
 const MyApp: AppType = ({ Component, pageProps }) => {
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    setReady(true);
+  }, []);
+
   return (
-    <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains}>
-        <Component {...pageProps} />
-      </RainbowKitProvider>
-    </WagmiConfig>
+    <>
+      {ready ? (
+        <WagmiConfig config={wagmiConfig}>
+          <RainbowKitProvider chains={chains}>
+            <Component {...pageProps} />
+          </RainbowKitProvider>
+        </WagmiConfig>
+      ) : null}
+    </>
   );
 };
 
