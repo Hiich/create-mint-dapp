@@ -7,7 +7,7 @@ import { z } from "zod";
 const server = z.object({
   NODE_ENV: z.enum(["development", "test", "production"]),
   ALCHEMY_ID: z.string(),
-  WALLET_CONNECT_ID: z.string(),
+  NEXT_PUBLIC_WALLET_CONNECT_ID: z.string(),
 });
 
 /**
@@ -27,7 +27,7 @@ const client = z.object({
 const processEnv = {
   NODE_ENV: process.env.NODE_ENV,
   ALCHEMY_ID: process.env.ALCHEMY_ID,
-  WALLET_CONNECT_ID: process.env.WALLET_CONNECT_ID,
+  NEXT_PUBLIC_WALLET_CONNECT_ID: process.env.WALLET_CONNECT_ID,
   // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
 };
 

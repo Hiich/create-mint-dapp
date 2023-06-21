@@ -1,5 +1,11 @@
 {
-  "name": "squirrels",
+  "name": "create-mint-app",
+  "author": {
+    "name": "hich.eth",
+    "email": "hichtoken@gmail.com"
+  },
+  "license": "MIT",
+  "description": "Create a mint app with Next.js, Tailwind CSS, and TypeScript",
   "version": "0.1.0",
   "private": true,
   "scripts": {

@@ -1,7 +1,4 @@
 import { type AppType } from "next/app";
-
-import { api } from "~/utils/api";
-
 import "~/styles/globals.css";
 import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
@@ -10,18 +7,19 @@ import { mainnet, sepolia } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import { useEffect, useState } from "react";
+import { websiteConfig } from "config/config";
 
 const { chains, publicClient } = configureChains(
   [mainnet, sepolia],
   [
-    alchemyProvider({ apiKey: "avlryM1nsSpO_VL9RX64Tpiadd0Qmsac" }),
+    alchemyProvider({ apiKey: process.env.ALCHEMY_ID as string }),
     publicProvider(),
   ]
 );
 
 const { connectors } = getDefaultWallets({
-  appName: "Squirrels NFT",
-  projectId: "48de3ac2c5979f55e5faf761cc190f64",
+  appName: `${websiteConfig.projectName}`,
+  projectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_ID as string,
   chains,
 });
 
@@ -31,7 +29,7 @@ const wagmiConfig = createConfig({
   publicClient,
 });
 
-const MyApp: AppType = ({ Component, pageProps }) => {
+const MinterDapp: AppType = ({ Component, pageProps }) => {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -51,4 +49,4 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   );
 };
 
-export default api.withTRPC(MyApp);
+export default MinterDapp;

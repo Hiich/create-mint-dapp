@@ -1,13 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+
+// import { websiteConfig } from 'config/config';
+
 const config = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       backgroundImage: {
-        forrest: "url('/images/forrest.gif')",
-      },
-      fontFamily: {
-        pixel: ["VT323", "sans-serif"],
+        background: "url('/images/background.png')",
       },
     },
   },
