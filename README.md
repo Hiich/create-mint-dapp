@@ -1,30 +1,55 @@
-# Create T3 App
+# Next.js NFT Minting DApp
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Welcome to your Next.js NFT Minting Decentralized Application (DApp)! This project has been set up with Next.js and is styled with Tailwind CSS and RainbowKit for a modern and responsive design. It's designed to be straightforward to set up, allowing you to start minting your own NFTs in no time!
 
-## What's next? How do I make an app with this?
+## Getting Started
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+### Prerequisites
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+Before you begin, make sure you have [Node.js](https://nodejs.org/) installed. You'll also need to install the project dependencies.
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+```
+npm install
+```
 
-## Learn More
+### Configuration
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+Next, you'll need to update the configuration file for your project. The configuration file is located in the `config` folder.
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+Open the configuration file and replace the placeholders with your own project parameters.
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+### Setting up your images
 
-## How do I deploy this?
+Replace the background image in the `public/images` folder with the background image of your choice.
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
-# squirrels
-# create-mint-dapp
+### Running the App
+
+To start the application, run:
+
+```
+npm run dev
+```
+
+Your app will now be running at `http://localhost:3000`.
+
+### Blockchain Configuration
+
+Navigate to the `src/blockchain` directory. Here, you'll find a configuration file where you'll need to specify the contract address of your newly deployed contract.
+
+## Smart Contract
+
+You can find the Smart Contract in the `blockchain` folder. This contains all the necessary code for your NFT Smart Contract.
+
+## Development
+
+This project is set up with a hot-reloading development environment, so you can see your changes in real time.
+
+## Contributing
+
+Contributions are always welcome! Please read the contribution guidelines first.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+We hope you find this Next.js NFT minting DApp helpful and easy to use. Happy minting!
